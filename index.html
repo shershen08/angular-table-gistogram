@@ -22,7 +22,7 @@
 
              <table class="table table-striped table-gistogram-style"
                    table-gistogram
-                   tgdataindex="3">
+                   data-tgdataindex="3">
               <thead>
                 <tr>
                   <th>First Name</th>
@@ -55,16 +55,17 @@
             <pre>&lt;table class="table table-striped <strong>table-gistogram-style" table-gistogram tgdataindex="3" tgopacity="0.5" tgbgcolor="pink"</strong>&gt;</pre>
 
             <div class="btn-group" role="group">
-              <button type="button" class="btn btn-default" id="show-gistogram" data-table="gistogram-demo">show</button>
-              <button type="button" class="btn btn-default" id="hide-gistogram" data-table="gistogram-demo">hide</button>
+              <button type="button" class="btn btn-default" ng-click="showTable()">show</button>
+              <button type="button" class="btn btn-default" ng-click="hideTable()">hide</button>
             </div>
 
             <table class="table table-striped table-gistogram-style"
                    id="gistogram-demo"
                    table-gistogram
-                   tgdataindex="3"
-                   tgopacity="0.5"
-                   tgbgcolor="pink">
+                   data-tgdataindex="3"
+                   data-tgopacity="0.5"
+                   data-tgshowgistogram="{{scopeShowGistogram}}"
+                   data-tgbgcolor="pink">
               <thead>
                 <tr>
                   <th>#</th>

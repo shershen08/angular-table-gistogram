@@ -2,6 +2,12 @@
   /* table-gistogram plugin configuration */
   .gistogram__wrapper .gistogram__line {
     width: 0px;
+    display: none;
+    -webkit-transition: width .6s;
+    transition: width .6s;
+  }
+   .gistogram__wrapper .tg-activate .gistogram__line {
+    display: block;
     -webkit-transition: width .6s;
     transition: width .6s;
   }

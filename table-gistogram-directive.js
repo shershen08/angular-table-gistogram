@@ -12,9 +12,9 @@ tableGistogram.directive('tableGistogram', function(){
         restrict    : 'AC',
         replace     : false,
         scope       : {
-            'tgdataindex' : '=',
-            'tgopacity'   : '=',
-            'tgbgcolor'   : '='
+            'tgdataindex'       : '=',
+            'tgopacity'         : '=',
+            'tgbgcolor'         : '='
         },
         link : function(scope, iElement, iAttr){
 
@@ -56,24 +56,13 @@ tableGistogram.directive('tableGistogram', function(){
                 iElement.after(wrapperDiv);
                 if(defaults.activeByDefault) iElement.addClass(defaults.activationClass);
 
-                //listening to the class changes
-                scope.$watch(function() {
-                  return iElement.attr('class');
-                }, function(newValue, oldValue) {
-                  if (newValue.indexOf(defaults.activationClass) > -1 ){
+                iAttr.$observe('tgshowgistogram', function(val){
+                    //if(val){
+                        angular.element(wrapperDiv).toggleClass('tg-activate');
+                        
+                    //}
+                })
 
-                    jQuery('.gistogram__line').each(function(index, item) {
-                       jQuery(item).width(jQuery(item).data('width') + '%');
-                    });
-
-                  } else {
-
-                     jQuery('.gistogram__line').each(function(index, item) {
-                         jQuery(item).width(0);
-                    });
-
-                  }
-                });
         }
     }
 })
