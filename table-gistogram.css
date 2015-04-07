@@ -1,0 +1,11 @@
+
+  /* table-gistogram plugin configuration */
+  .gistogram__wrapper .gistogram__line {
+    width: 0px;
+    -webkit-transition: width .6s;
+    transition: width .6s;
+  }
+  .gistogram__wrapper .gistogram__data {
+    position: relative;
+    z-index: -1;
+  }

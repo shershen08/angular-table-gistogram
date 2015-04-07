@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html ng-app="testApp">
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+  <link href="app.less" type="text/css" rel="stylesheet/less">
+
+</head>
+<body>
+
+
+  <!-- Add New Component JS Above -->
+
+  <div>
+    <div id="content" class="container">
+      <div class="row" ng-controller="mainCtrl">
+
+            <h2>Example 1 <small>Default settings</small></h2>
+
+            <pre>&lt;table class="table table-striped <strong>table-gistogram-style" table-gistogram tgdataindex="3"</strong>&gt;</pre>
+
+             <table class="table table-striped table-gistogram-style"
+                   table-gistogram
+                   tgdataindex="3">
+              <thead>
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Money</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>25</td>
+                </tr>
+                 <tr>
+                  <td>Lycy</td>
+                  <td>Brinks</td>
+                  <td>48</td>
+                </tr>
+                <tr>
+                  <td>Peter</td>
+                  <td>James</td>
+                  <td>5</td>
+                </tr>
+              </tbody>
+            </table>
+
+
+             <h2>Example 2 <small>Additional parameters</small></h2>
+
+            <pre>&lt;table class="table table-striped <strong>table-gistogram-style" table-gistogram tgdataindex="3" tgopacity="0.5" tgbgcolor="pink"</strong>&gt;</pre>
+
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default" id="show-gistogram" data-table="gistogram-demo">show</button>
+              <button type="button" class="btn btn-default" id="hide-gistogram" data-table="gistogram-demo">hide</button>
+            </div>
+
+            <table class="table table-striped table-gistogram-style"
+                   id="gistogram-demo"
+                   table-gistogram
+                   tgdataindex="3"
+                   tgopacity="0.5"
+                   tgbgcolor="pink">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Points</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>25</td>
+                </tr>
+                 <tr>
+                  <th scope="row">2</th>
+                  <td>Lycy</td>
+                  <td>Brinks</td>
+                  <td>48</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Peter</td>
+                  <td>James</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>138</td>
+                </tr>
+                 <tr>
+                  <th scope="row">5</th>
+                  <td>William</td>
+                  <td>Connor</td>
+                  <td>99</td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>70</td>
+                </tr>
+                <tr>
+                  <th scope="row">7</th>
+                  <td>Sofi</td>
+                  <td></td>
+                  <td>165</td>
+                </tr>
+              </tbody>
+            </table>
+
+
+      <h2>Usage</h2>
+
+      <h5>1. Include on the page</h5>
+        <pre>
+&lt;link href="PATH_TO/table-gistogram.css" type="text/css" rel="stylesheet"&gt;
+&lt;script src="PATH_TO/table-gistogram-directive.js"&gt;&lt;/script&gt;
+        </pre>
+
+      <h5>2. Add as a dependancy in Angular application</h5>
+          <pre>angular.module('testApp', ['tableGistogram']);</pre>
+
+      </div>
+    </div>
+  </div>
+  <!-- Livereload script for development only (stripped during dist build) -->
+  <script src="http://localhost:35729/livereload.js" data-concat="false"></script>
+
+  <!-- JS from Bower Components -->
+  <script src="bower_components/less.js/dist/less-1.6.2.js" data-concat="false"></script>
+  <script src="bower_components/jquery/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/angular-ui-utils/ui-utils.js"></script>
+  <!-- Add New Bower Component JS Above -->
+
+
+  <style type="text/css">
+
+  /* changes neened in Bootstrap CSS*/
+  table.table-striped.table-gistogram-style tbody tr td, table.table-striped.table-gistogram-style tbody tr th{
+    background: transparent;
+  }
+  table.table-striped {
+    margin-bottom: 0px;
+  }
+
+  </style>
+  <script src="app.js"></script>
+ 
+  <!-- table-gistogram plugin -->
+    <link href="table-gistogram.css" type="text/css" rel="stylesheet">
+    <script src="table-gistogram-directive.js"></script>
+
+</body>
+</html>
